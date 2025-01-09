@@ -90,24 +90,10 @@ console.log("Total price of items in the cart:", totalPrice);
 
 ---
 
-## Slide 7: Advanced Example 2
-### Validate a Form with Email Check
-```javascript
-function validateForm(formData) {
-    const { name, email } = formData;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return name && email && emailRegex.test(email);
-}
-console.log(validateForm({ name: "John", email: "john@example.com" })); // true
-console.log(validateForm({ name: "", email: "john@example.com" }));    // false
-```
-- Explanation:
-  - Regex checks email format.
-  - Ensures both `name` and `email` are provided.
 
 ---
 
-## Slide 8: Challenge Example 1
+## Slide 7: Challenge Example 1
 ### Simulate a Traffic Light
 ```javascript
 function nextTrafficLight(current) {
@@ -125,26 +111,6 @@ console.log(nextTrafficLight("green"));  // yellow
 
 ---
 
-## Slide 9: Challenge Example 2
-### Password Validation with Multiple Criteria
-```javascript
-function validatePassword(password) {
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-    const isValidLength = password.length >= 8;
-
-    return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && isValidLength;
-}
-console.log(validatePassword("Passw0rd!")); // true
-console.log(validatePassword("password"));  // false
-```
-- Explanation:
-  - Regex checks for uppercase, lowercase, numbers, and special characters.
-  - Ensures password length is at least 8 characters.
-
----
 
 ## Slide 10: Closing Slide
 - Summary:
