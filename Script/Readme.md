@@ -185,6 +185,8 @@
 ### **Challenge**
 1. **Calculate factorial using a loop**:
    ```javascript
+
+
    function factorial(n) {
        let result = 1;
        for (let i = 1; i <= n; i++) {
@@ -193,7 +195,7 @@
        return result;
    }
    console.log("Factorial:", factorial(5)); // Output: 120
-   ```
+   
 
 2. **Simulate a simple bank account**:
    ```javascript

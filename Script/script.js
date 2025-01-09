@@ -1,11 +1,8 @@
-function validatePassword(password) {
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-    const isValidLength = password.length >= 8;
-
-    return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && isValidLength;
+function validateForm(formData) {
+    const { name, email } = formData;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return name && email && emailRegex.test(email);
 }
-console.log(validatePassword("Passw0rd!")); // true
-console.log(validatePassword("password"));  // false
+console.log(validateForm({ name: "John", email: "john@example.com" })); // Output: true
+console.log(validateForm({ name: "", email: "john@example.com" }));    // Output: false
+```
