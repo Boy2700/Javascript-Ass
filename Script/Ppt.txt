@@ -1,0 +1,155 @@
+# JavaScript Basics, Intermediate, and Advanced Topics
+
+## Slide 1: Title Slide
+**Title:** JavaScript Basics, Intermediate, and Advanced Examples
+- By: [Your Name]
+- Presentation Overview:
+  - Basics: Simple operators and syntax
+  - Intermediate: Logical operators and conditions
+  - Advanced: Complex implementations and challenges
+
+---
+
+## Slide 2: Beginner Example 1
+### Add Two Numbers Using the `+` Operator
+```javascript
+let num1 = 5;
+let num2 = 7;
+let result = num1 + num2;
+console.log("The sum is:", result);
+```
+- Explanation:
+  - `num1` and `num2` are added using `+`.
+  - Result is stored in `result` and logged to the console.
+
+---
+
+## Slide 3: Beginner Example 2
+### Check if a Number is Even or Odd Using `%`
+```javascript
+let number = 10;
+if (number % 2 === 0) {
+    console.log(`${number} is even`);
+} else {
+    console.log(`${number} is odd`);
+}
+```
+- Explanation:
+  - `%` gives the remainder.
+  - Check if `number % 2 === 0` to determine even or odd.
+
+---
+
+## Slide 4: Intermediate Example 1
+### Compare Two Numbers and Log the Larger One
+```javascript
+let a = 15;
+let b = 20;
+if (a > b) {
+    console.log("The larger number is:", a);
+} else {
+    console.log("The larger number is:", b);
+}
+```
+- Explanation:
+  - `if` checks if `a > b`.
+  - The larger number is logged.
+
+---
+
+## Slide 5: Intermediate Example 2
+### Validate Admin Access with `&&`
+```javascript
+let isLoggedIn = true;
+let isAdmin = false;
+if (isLoggedIn && isAdmin) {
+    console.log("User has admin access");
+} else {
+    console.log("Access denied");
+}
+```
+- Explanation:
+  - `&&` ensures both conditions are true.
+  - Admin access is granted only if both conditions pass.
+
+---
+
+## Slide 6: Advanced Example 1
+### Calculate Total Price in a Cart
+```javascript
+let cart = [10.5, 20.99, 5.0, 12.3];
+let totalPrice = 0;
+for (let price of cart) {
+    totalPrice += price;
+}
+console.log("Total price of items in the cart:", totalPrice);
+```
+- Explanation:
+  - Loop through `cart` array.
+  - Add each `price` to `totalPrice`.
+
+---
+
+## Slide 7: Advanced Example 2
+### Validate a Form with Email Check
+```javascript
+function validateForm(formData) {
+    const { name, email } = formData;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return name && email && emailRegex.test(email);
+}
+console.log(validateForm({ name: "John", email: "john@example.com" })); // true
+console.log(validateForm({ name: "", email: "john@example.com" }));    // false
+```
+- Explanation:
+  - Regex checks email format.
+  - Ensures both `name` and `email` are provided.
+
+---
+
+## Slide 8: Challenge Example 1
+### Simulate a Traffic Light
+```javascript
+function nextTrafficLight(current) {
+    return current === "red"
+        ? "green"
+        : current === "green"
+        ? "yellow"
+        : "red";
+}
+console.log(nextTrafficLight("red"));    // green
+console.log(nextTrafficLight("green"));  // yellow
+```
+- Explanation:
+  - Nested ternary operator cycles through traffic light colors.
+
+---
+
+## Slide 9: Challenge Example 2
+### Password Validation with Multiple Criteria
+```javascript
+function validatePassword(password) {
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    const isValidLength = password.length >= 8;
+
+    return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && isValidLength;
+}
+console.log(validatePassword("Passw0rd!")); // true
+console.log(validatePassword("password"));  // false
+```
+- Explanation:
+  - Regex checks for uppercase, lowercase, numbers, and special characters.
+  - Ensures password length is at least 8 characters.
+
+---
+
+## Slide 10: Closing Slide
+- Summary:
+  - Basics: Operators and Syntax.
+  - Intermediate: Logical conditions.
+  - Advanced: Real-world use cases.
+- Questions and Discussions
+
